@@ -1,0 +1,20 @@
+name: FastGhostFix
+version: 1.0.0
+main: com.fast.ghost.FastGhostFix
+api-version: '1.21'
+author: Fast
+description: Fix ghost hits - Pro Medium Edition
+
+commands:
+  fastghostfix:
+    description: Main command
+    usage: /fastghostfix <status|reload|stats|top>
+    aliases: [fgf]
+
+permissions:
+  fastghostfix.admin:
+    description: Admin commands
+    default: op
+  fastghostfix.status:
+    description: View status
+    default: op
