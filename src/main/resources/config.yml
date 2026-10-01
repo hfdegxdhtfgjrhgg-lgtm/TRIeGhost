@@ -1,0 +1,83 @@
+# =========================================================
+# FastGhostFix - Pro Medium Edition
+# =========================================================
+
+server-name: "FastServer"
+
+enabled: true
+
+# ===== معالجة Ghost Hits =====
+ghost-hit-fixer:
+  enabled: true
+  only-player-hits: true
+  min-damage: 0.01
+  max-damage: 1000.0
+
+# ===== Ping Compensation =====
+ping-compensation:
+  enabled: true
+  max-ping: 250
+  base-reach: 3.0
+  max-reach: 4.5
+  # جدول التعويض حسب Ping
+  table:
+    - max-ping: 50
+      extra-reach: 0.0
+    - max-ping: 100
+      extra-reach: 0.3
+    - max-ping: 150
+      extra-reach: 0.6
+    - max-ping: 200
+      extra-reach: 0.9
+    - max-ping: 250
+      extra-reach: 1.2
+
+# ===== Duplicate Protection =====
+duplicate-protection:
+  enabled: true
+  window-ms: 50
+  history-size: 200
+
+# ===== Reach Validation =====
+reach-validation:
+  enabled: true
+
+# ===== تسجيل =====
+logging:
+  console: false
+  hits-file: true
+  ghost-file: true
+
+# ===== التصحيح =====
+debug:
+  enabled: false
+
+# ===== الرسائل =====
+messages:
+  prefix: "&8[&6FastGhostFix&8] "
+  no-permission: "&cليس لديك صلاحية."
+  reload: "&aتم إعادة تحميل FastGhostFix."
+
+  status:
+    - "&6&m-----------------------------"
+    - "&6FastGhostFix &7- &fPro Medium"
+    - "&7Status: &a%status%"
+    - "&7Hits Received: &f%received%"
+    - "&7Hits Cancelled: &f%cancelled%"
+    - "&7Hits Fixed: &a%fixed%"
+    - "&7Hits Logged: &f%logged%"
+    - "&6&m-----------------------------"
+
+  stats:
+    - "&6&m-----------------------------"
+    - "&7Player: &f%player%"
+    - "&7Hits: &f%received%"
+    - "&7Cancelled: &f%cancelled%"
+    - "&7Fixed: &a%fixed%"
+    - "&6&m-----------------------------"
+
+  top:
+    - "&6&m-----------------------------"
+    - "&6Top 10 Players"
+    - "%entries%"
+    - "&6&m-----------------------------"
